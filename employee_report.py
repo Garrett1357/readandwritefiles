@@ -37,8 +37,8 @@ for category, names in categories.items():
     for name in names:
         print(f"{name}")
 print("\nAge Groups:")
-for group, names in ages.items():
-    print(f"\nEmployees in their {group}:")
+for agegroup, names in ages.items():
+    print(f"\nEmployees in their {agegroup}:")
     for name in names:
         print(f"{name}")
-    print(f"Total number of employees in their {group}: {len(names)}")
+    print(f"Total number of employees in their {agegroup}: {len(names)}")
