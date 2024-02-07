@@ -6,8 +6,8 @@
 ## Management would also like to know who and how many are in different age categories - 
 ## 20s, 30s and 40s. Reproduce the report as show below (print statements).
 import csv
-ages = {'20s': [], '30s': [], '40s': []} #Establishes list for age
-categories = {'Highly Efficient': [], 'Inefficient': []} # Establishes list for efficiency categories
+ages = {'20s': [], '30s': [], '40s': []} #Establishes dictionary for age with keys
+categories = {'Highly Efficient': [], 'Inefficient': []} # Establishes dictionary for efficiency with keys
 
 employee = open('employee_data.csv','r')
 csv_file = csv.reader(employee)
@@ -20,14 +20,14 @@ for rec in csv_file:    #This brings each record into a list format
     efficiency = (prod / hrs)
 #efficiency calculations     
     if efficiency >= 2:
-        categories['Highly Efficient'].append(name)
+        categories['Highly Efficient'].append(name) # appends name to efficiency dictionary list
     elif efficiency <= 1:
         categories['Inefficient'].append(name)
 #age calculation
     if 20 <= age < 30:
-            ages['20s'].append(name)
+            ages['20s'].append(name) # appends name to age dictionary list
     elif 30 <= age < 40:
-            ages['30s'].append(name)
+            ages['30s'].append(name) 
     elif 40 <= age < 50:
             ages['40s'].append(name)
     #input()
