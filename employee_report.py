@@ -12,7 +12,7 @@ categories = {'Highly Efficient': [], 'Inefficient': []} # Establishes dictionar
 employee = open('employee_data.csv','r')
 csv_file = csv.reader(employee)
 next(csv_file) #skips header and starts on the next line
-for rec in csv_file:    #This brings each record into a list format 
+for rec in csv_file:    #This brings each record into a loop
     name = rec[1] #indexing starts at pos 0
     age = int(rec[2])
     prod = int(rec[5])
@@ -25,11 +25,11 @@ for rec in csv_file:    #This brings each record into a list format
         categories['Inefficient'].append(name)
 #age calculation
     if 20 <= age < 30:
-            ages['20s'].append(name) # appends name to age dictionary list
+        ages['20s'].append(name) # appends name to age dictionary list
     elif 30 <= age < 40:
-            ages['30s'].append(name) 
+        ages['30s'].append(name) 
     elif 40 <= age < 50:
-            ages['40s'].append(name)
+        ages['40s'].append(name)
     #input()
 print("Efficiency Categories:")
 for category, names in categories.items():
