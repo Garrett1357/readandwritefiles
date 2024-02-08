@@ -31,13 +31,10 @@ for rec in csv_file:    #This brings each record into a loop
     elif age < 50 and age >= 40:
         ages['40s'].append(name)
     #input()
-print("Efficiency Categories:")
 for category, names in categories.items():
     print(f"\n{category} Individuals:")
     for name in names: # Starts loop to print names from dictionary
         print(f"{name}")
-        
-print("\nAge Groups:")
 for agegroup, names in ages.items():
     print(f"\nEmployees in their {agegroup}:")
     for name in names: # Starts loop to print names from dictionary
